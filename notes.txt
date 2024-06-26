@@ -1,0 +1,31 @@
+1. Niche into several areas
+- Getting information of what research has been done based on the topic/context [sciencefair.io]
+- Come up with 2 spinoff ideas to improve upon the past or exisitng research [sciencefair.io]
+- spinoff project description in a bullet points [ sciencefair.io]
+- suggest papers to read based on the spinoff
+
+2. Install Mendeley
+- For generating references and citations.
+
+3. Put Each Area into SciSpace
+- Search each of the bullet points from the spinoff project description, search for related papers [scispace]
+- the papers should have: title, writer, date publised, publisher
+- summarize the top 5 papers found.
+- Each of the papers found: Generate 3 max bullet points as insights
+
+4. Put Each Paper Paper into Mendeley
+- Organize by type of paper into each folder
+
+5. ChatPDF
+- Read the Paper using ChatPDF
+- Let the user describe his level of expertise, and the AI should answer the explain or respond based on the expertise
+
+6. Paper Notes Templates
+- Certain sections matter; sciencefair.io/guide
+- the important parts the AI should explain but in summary: abstract -> intro -> Figures -> Conclusions
+- Get into any remaining details (methods, results, supplementary, appendices, etc.)
+- write 1 paragraph per source
+
+7. Identify important papers and Mindmap Using Them
+- Make a notes 
+
