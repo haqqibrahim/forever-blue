@@ -5,11 +5,15 @@ from phi.llm.groq import Groq
 from phi.tools.arxiv_toolkit import ArxivToolkit
 from phi.tools.duckduckgo import DuckDuckGo
 from phi.tools.exa import ExaTools
+import streamlit as st
 
 load_dotenv()
 
-groq_api_key = os.environ.get("GROQ_API_KEY")
-exa_api_key = os.environ.get("EXA_API_KEY")
+# groq_api_key = os.environ.get("GROQ_API_KEY")
+# exa_api_key = os.environ.get("EXA_API_KEY")
+
+groq_api_key = st.secrets["GROQ_API_KEY"]
+exa_api_key = st.secrets["EXA_API_KEY"]
 
   
 def ai(prompt):
