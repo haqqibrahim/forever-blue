@@ -3,7 +3,7 @@ from time import sleep
 from navigation import make_sidebar
 
 
-st.title("Welcome to Forever Blue")
+st.title("Welcome to Forever Blue 💙")
 
 st.write("Please log in to continue (username `test`, password `test`).")
 
