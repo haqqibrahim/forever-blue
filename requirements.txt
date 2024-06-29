@@ -9,3 +9,4 @@ pypdf
 # psycopg2
 pgvector 
 beautifulsoup4
+ollama
