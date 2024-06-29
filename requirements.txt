@@ -5,3 +5,6 @@ groq
 openai
 exa_py
 python-dotenv
+pypdf
+psycopg2
+pgvector 
