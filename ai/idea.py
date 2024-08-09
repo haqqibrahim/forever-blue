@@ -19,9 +19,9 @@ def ai(prompt):
         "Provide existing papers that relate to the topic/context/subjects, maximum of 8",
         "Come up with 2 spinoff ideas to improve upon the past or exisitng research",
         "generate description for the 2 spinoff project in a bullet point format",
-        "suggest papers to read based on the 2 spinoff"
+       
     ],
-    tools=[DuckDuckGo(), ExaTools(api_key=exa_api_key)]
+    tools=[ExaTools(api_key=exa_api_key)]
     # debug_mode=True,
     )
     

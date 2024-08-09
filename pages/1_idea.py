@@ -13,6 +13,9 @@ exa_api_key = st.secrets["EXA_API_KEY"]
 # st.title("Forever Blue 💙")
 # st.markdown("##### :blue_heart: built by [phidata](https://github.com/phidatahq/phidata)")
 
+if "chats_message" not in st.session_state:
+    st.session_state["chats_message"] = []
+
   
 # Load chat history from shelve file
 def load_chat_history():
@@ -28,11 +31,11 @@ def save_chat_history(messages):
 
 # Initialize or load chat history
 if "messages" not in st.session_state:
-    st.session_state.messages = load_chat_history()
+    st.session_state["chats_message"] = load_chat_history()
   
 with st.sidebar:
     if st.button("Delete Chat History"):
-        st.session_state.messages = []
+        st.session_state["chats_message"] = []
         save_chat_history([])
 
 state = st.session_state["auth"] 
@@ -43,14 +46,14 @@ def main() -> None:
         
     else:
         # Display chat messages
-        for message in st.session_state.messages:
+        for message in st.session_state["chats_message"]:
             avatar = USER_AVATAR if message["role"] == "user" else BOT_AVATAR
             with st.chat_message(message["role"], avatar=avatar):
                 st.markdown(message["content"])
                 
         # Main chat interface
         if prompt := st.chat_input("How can I help?"):
-            st.session_state.messages.append({"role": "user", "content": prompt})
+            st.session_state["chats_message"].append({"role": "user", "content": prompt})
             with st.chat_message("user", avatar=USER_AVATAR):
                 st.markdown(prompt)
                 
@@ -64,10 +67,10 @@ def main() -> None:
                 
                 message_placeholder.markdown(full_response + "|")
                 message_placeholder.markdown(full_response)
-            st.session_state.messages.append({"role": "assistant", "content": full_response})
+            st.session_state["chats_message"].append({"role": "assistant", "content": full_response})
 
         # Save chat history after each interaction
-        save_chat_history(st.session_state.messages)
+        save_chat_history(st.session_state["chats_message"])
 
 
 

@@ -18,7 +18,7 @@ def related_papers(prompt):
        "Find related papers to the given topic/context/subject",
        "Provide a detailed summary of the papers found",
        "generate at least 3 key insights per paper",
-       "Provided the papers should have: title, writer, date publised, publisher"
+       "Provided the papers should have: title in full, writer's name in full, date publised, publisher"
     ],
     tools=[DuckDuckGo(), ExaTools(api_key=exa_api_key)]
     # debug_mode=True,
