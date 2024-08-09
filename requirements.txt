@@ -10,3 +10,4 @@ pypdf
 pgvector 
 beautifulsoup4
 ollama
+sqlalchemy
