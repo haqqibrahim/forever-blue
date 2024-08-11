@@ -49,7 +49,7 @@ def main() -> None:
     user_grade = st.sidebar.text_input(
             "Explain your level", type="default",
         )
-    embeddings_model = "nomic-embed-text"
+    embeddings_model = "text-embedding-3-small"
     # Set assistant_type in session state
     if "embeddings_model" not in st.session_state:
         st.session_state["embeddings_model"] = embeddings_model
@@ -168,9 +168,9 @@ def main() -> None:
     if st.sidebar.button("New Chat"):
         restart_assistant()
 
-    if "embeddings_model_updated" in st.session_state:
-        st.sidebar.info("Please add documents again as the embeddings model has changed.")
-        st.session_state["embeddings_model_updated"] = False
+    # if "embeddings_model_updated" in st.session_state:
+    #     st.sidebar.info("Please add documents again as the embeddings model has changed.")
+    #     st.session_state["embeddings_model_updated"] = False
 
 
 main()
