@@ -168,9 +168,9 @@ def main() -> None:
     if st.sidebar.button("New Chat"):
         restart_assistant()
 
-    # if "embeddings_model_updated" in st.session_state:
-    #     st.sidebar.info("Please add documents again as the embeddings model has changed.")
-    #     st.session_state["embeddings_model_updated"] = False
+    if "embeddings_model_updated" in st.session_state:
+        st.sidebar.info("Please add documents again as the embeddings model has changed.")
+        st.session_state["embeddings_model_updated"] = False
 
 
 main()
