@@ -12,3 +12,4 @@ beautifulsoup4
 ollama
 sqlalchemy
 psycopg2-binary
+nest-asyncio

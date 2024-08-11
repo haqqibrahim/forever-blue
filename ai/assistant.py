@@ -8,15 +8,17 @@ from phi.embedder.ollama import OllamaEmbedder
 from phi.vectordb.pgvector import PgVector2
 from phi.storage.assistant.postgres import PgAssistantStorage
 from phi.embedder.together import TogetherEmbedder
+from phi.embedder.fireworks import FireworksEmbedder
 
 db_url = st.secrets["DB_URL"]
 groq_api_key = st.secrets["GROQ_API_KEY"]
 together_api_key=st.secrets["TOGETHER_AI"]
+firewroks_api = st.secrets["FIREWORKS_AI"]
 
 # dvs
 def get_groq_assistant(
     llm_model: str = "llama3-70b-8192",
-    embeddings_model: str = "text-embedding-3-small",
+    embeddings_model: str = "nomic-embed-text",
     user_id: Optional[str] = None,
     run_id: Optional[str] = None,
     debug_mode: bool = True,
@@ -45,7 +47,7 @@ def get_groq_assistant(
             vector_db=PgVector2(
                 db_url=db_url,
                 collection=embeddings_table,
-                embedder=TogetherEmbedder(api_key=together_api_key),
+                embedder=FireworksEmbedder(api_key=firewroks_api),
             ),
             # 2 references are added to the prompt
             num_documents=2,

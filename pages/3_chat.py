@@ -49,7 +49,7 @@ def main() -> None:
     user_grade = st.sidebar.text_input(
             "Explain your level", type="default",
         )
-    embeddings_model = "text-embedding-3-small"
+    embeddings_model = "nomic-embed-text"
     # Set assistant_type in session state
     if "embeddings_model" not in st.session_state:
         st.session_state["embeddings_model"] = embeddings_model
