@@ -1,5 +1,5 @@
 .env
-.streamlit
+.streamlit/secrets.toml
 chat_history_2.bak
 chat_history_2.dat
 chat_history_2.dir
