@@ -24,7 +24,7 @@ if option == "Login":
             st.success("Logged in successfully!")
             st.session_state["auth"] = True
             sleep(0.5)
-            st.switch_page("pages/1_idea.py")
+            st.switch_page("pages/1_idea_generation.py")
         else:
             st.session_state["auth"] = False
             st.error("Incorrect username or password")
