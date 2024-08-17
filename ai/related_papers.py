@@ -3,7 +3,6 @@ from phi.assistant import Assistant
 from phi.llm.groq import Groq
 from phi.tools.duckduckgo import DuckDuckGo
 from phi.tools.exa import ExaTools
-from phi.tools.arxiv_toolkit import ArxivToolkit
 
 import streamlit as st
 
